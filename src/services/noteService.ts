@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type { Note, NoteTag } from '../types.ts/type';
+import type { Note, NoteTag } from '../types/type';
 
 // interface FetchNotesParams {
 //   search: string;
