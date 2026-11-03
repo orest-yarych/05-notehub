@@ -2,7 +2,7 @@ import css from './SearchBox.module.css';
 
 interface SearchBoxProps {
   query: string;
-  setQuery: (v: string) => void;
+  setQuery: (query: string) => void;
 }
 
 export default function SearchBox({ query, setQuery }: SearchBoxProps) {

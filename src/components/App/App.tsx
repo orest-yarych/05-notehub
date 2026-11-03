@@ -24,7 +24,10 @@ export default function App() {
 
   const notes = data?.notes || [];
 
-  const setQueryDebounce = useDebouncedCallback(setQuery, 1000);
+  const setQueryDebounce = useDebouncedCallback((query: string) => {
+    setQuery(query);
+    setCurrentPage(1);
+  }, 1000);
 
   const closeModal = () => setIsOpenModal(false);
 
