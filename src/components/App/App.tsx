@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { fetchNotes } from '../../services/noteService';
 import css from './App.module.css';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-import NoteList from '../NotesList/NoteList';
+import NoteList from '../NoteList/NoteList';
 import Pagination from '../Pagination/Pagination';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loader from '../Loader/Loader';
