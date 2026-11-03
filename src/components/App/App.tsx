@@ -12,13 +12,13 @@ import NoteForm from '../NoteForm/NoteForm';
 import Modal from '../Modal/Modal';
 
 export default function App() {
-  const [currenPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState('');
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['notes', query, currenPage],
-    queryFn: () => fetchNotes(query, currenPage),
+    queryKey: ['notes', query, currentPage],
+    queryFn: () => fetchNotes(query, currentPage),
     placeholderData: keepPreviousData,
   });
 
@@ -37,7 +37,7 @@ export default function App() {
         <SearchBox query={query} setQuery={setQueryDebounce} />
         {data && data.totalPages > 1 && (
           <Pagination
-            currentPage={currenPage}
+            currentPage={currentPage}
             totalPages={data.totalPages}
             onPageChange={setCurrentPage}
           />
